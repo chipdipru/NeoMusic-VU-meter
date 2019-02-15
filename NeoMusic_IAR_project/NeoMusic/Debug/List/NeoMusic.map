@@ -1,0 +1,274 @@
+###############################################################################
+#
+# IAR ELF Linker V7.60.1.11101/W32 for ARM                14/Feb/2019  20:34:00
+# Copyright 2007-2016 IAR Systems AB.
+#
+#    Output file  =  F:\ArmProjects\NeoMusic\Debug\Exe\NeoMusic.out
+#    Map file     =  F:\ArmProjects\NeoMusic\Debug\List\NeoMusic.map
+#    Command line =  
+#        F:\ArmProjects\NeoMusic\Debug\Obj\ADC.o
+#        F:\ArmProjects\NeoMusic\Debug\Obj\DataTables.o
+#        F:\ArmProjects\NeoMusic\Debug\Obj\main.o
+#        F:\ArmProjects\NeoMusic\Debug\Obj\NeoLEDOut.o
+#        F:\ArmProjects\NeoMusic\Debug\Obj\startup_stm32f030x6.o
+#        F:\ArmProjects\NeoMusic\Debug\Obj\stm32f0xx_it.o
+#        F:\ArmProjects\NeoMusic\Debug\Obj\system_stm32f0xx.o -o
+#        F:\ArmProjects\NeoMusic\Debug\Exe\NeoMusic.out --redirect
+#        _Printf=_PrintfFull --redirect _Scanf=_ScanfFull --map
+#        F:\ArmProjects\NeoMusic\Debug\List\NeoMusic.map --config
+#        F:\ArmProjects\NeoMusic\NeoMusic.icf --semihosting --entry
+#        __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x08003fff] { ro };
+"P2":  place in [from 0x20000000 to 0x20000fff] { rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind        Address    Size  Object
+  -------            ----        -------    ----  ------
+"A1":                                       0xb0
+  .intvec            ro code  0x08000000    0xb0  startup_stm32f030x6.o [1]
+                            - 0x080000b0    0xb0
+
+"P1":                                     0x108c
+  .text              ro code  0x080000b0   0x968  main.o [1]
+  .text              ro code  0x08000a18    0xc0  ADC.o [1]
+  .text              ro code  0x08000ad8    0xe0  I32DivModFast.o [4]
+  .text              ro code  0x08000bb8   0x34c  NeoLEDOut.o [1]
+  .text              ro code  0x08000f04     0x2  IntDivZer.o [4]
+  .text              ro code  0x08000f06     0x2  startup_stm32f030x6.o [1]
+  .text              ro code  0x08000f08    0x94  system_stm32f0xx.o [1]
+  .rodata            const    0x08000f9c    0x48  DataTables.o [1]
+  .text              ro code  0x08000fe4    0x3c  zero_init3.o [4]
+  .text              ro code  0x08001020    0x30  copy_init3.o [4]
+  .text              ro code  0x08001050    0x28  data_init.o [4]
+  .iar.init_table    const    0x08001078    0x24  - Linker created -
+  .text              ro code  0x0800109c    0x1a  cmain.o [4]
+  .text              ro code  0x080010b6     0x4  low_level_init.o [3]
+  .text              ro code  0x080010ba     0x8  exit.o [3]
+  .text              ro code  0x080010c2     0x2  startup_stm32f030x6.o [1]
+  .text              ro code  0x080010c4     0xa  cexit.o [4]
+  .text              ro code  0x080010ce     0x2  startup_stm32f030x6.o [1]
+  .text              ro code  0x080010d0    0x14  exit.o [5]
+  .text              ro code  0x080010e4    0x14  stm32f0xx_it.o [1]
+  .text              ro code  0x080010f8    0x10  startup_stm32f030x6.o [1]
+  .text              ro code  0x08001108     0xc  cstartup_M.o [4]
+  .rodata            const    0x08001114     0x4  DataTables.o [1]
+  .text              ro code  0x08001118     0x2  startup_stm32f030x6.o [1]
+  .text              ro code  0x0800111a     0x2  startup_stm32f030x6.o [1]
+  .text              ro code  0x0800111c     0x2  startup_stm32f030x6.o [1]
+  .text              ro code  0x0800111e     0x2  startup_stm32f030x6.o [1]
+  .text              ro code  0x08001120     0x2  startup_stm32f030x6.o [1]
+  .text              ro code  0x08001122     0x2  startup_stm32f030x6.o [1]
+  .text              ro code  0x08001124     0x2  startup_stm32f030x6.o [1]
+  .text              ro code  0x08001126     0x2  startup_stm32f030x6.o [1]
+  .text              ro code  0x08001128     0x2  startup_stm32f030x6.o [1]
+  .text              ro code  0x0800112a     0x2  startup_stm32f030x6.o [1]
+  .text              ro code  0x0800112c     0x2  startup_stm32f030x6.o [1]
+  .text              ro code  0x0800112e     0x2  startup_stm32f030x6.o [1]
+  .text              ro code  0x08001130     0x2  startup_stm32f030x6.o [1]
+  .text              ro code  0x08001132     0x2  startup_stm32f030x6.o [1]
+  .text              ro code  0x08001134     0x2  startup_stm32f030x6.o [1]
+  Initializer bytes  const    0x08001138     0x4  <for P2-1>
+  .rodata            const    0x0800113c     0x0  zero_init3.o [4]
+  .rodata            const    0x0800113c     0x0  copy_init3.o [4]
+                            - 0x0800113c  0x108c
+
+"P2", part 1 of 3:                           0x4
+  P2-1                        0x20000000     0x2  <Init block>
+    .data            inited   0x20000000     0x1  main.o [1]
+    .data            inited   0x20000001     0x1  main.o [1]
+                            - 0x20000002     0x2
+
+"P2", part 2 of 3:                         0x100
+  CSTACK                      0x20000008   0x100  <Block>
+    CSTACK           uninit   0x20000008   0x100  <Block tail>
+                            - 0x20000108   0x100
+
+"P2", part 3 of 3:                         0x1d4
+  .bss               zero     0x20000108   0x100  main.o [1]
+  .bss               zero     0x20000208    0x60  NeoLEDOut.o [1]
+  .bss               zero     0x20000268    0x54  main.o [1]
+  .bss               zero     0x200002bc    0x10  main.o [1]
+  .bss               zero     0x200002cc     0x4  NeoLEDOut.o [1]
+  .bss               zero     0x200002d0     0x4  NeoLEDOut.o [1]
+  .bss               zero     0x200002d4     0x2  NeoLEDOut.o [1]
+  .bss               zero     0x200002d6     0x1  main.o [1]
+  .bss               zero     0x200002d7     0x1  main.o [1]
+  .bss               zero     0x200002d8     0x1  main.o [1]
+  .bss               zero     0x200002d9     0x1  main.o [1]
+  .bss               zero     0x200002da     0x1  NeoLEDOut.o [1]
+                            - 0x200002db   0x1d3
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x1d3:
+          0x20000108  0x1d3
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x4 (200% of destination):
+          0x08001138    0x4
+    1 destination range, total size 0x2:
+          0x20000000    0x2
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data
+    ------                 -------  -------  -------
+F:\ArmProjects\NeoMusic\Debug\Obj: [1]
+    ADC.o                      192
+    DataTables.o                         76
+    NeoLEDOut.o                844               107
+    main.o                   2 408        2      362
+    startup_stm32f030x6.o      228
+    stm32f0xx_it.o              20
+    system_stm32f0xx.o         148
+    ------------------------------------------------
+    Total:                   3 840       78      469
+
+command line: [2]
+    ------------------------------------------------
+    Total:
+
+dl6M_tln.a: [3]
+    exit.o                       8
+    low_level_init.o             4
+    ------------------------------------------------
+    Total:                      12
+
+rt6M_tl.a: [4]
+    I32DivModFast.o            224
+    IntDivZer.o                  2
+    cexit.o                     10
+    cmain.o                     26
+    copy_init3.o                48
+    cstartup_M.o                12
+    data_init.o                 40
+    zero_init3.o                60
+    ------------------------------------------------
+    Total:                     422
+
+shb_l.a: [5]
+    exit.o                      20
+    ------------------------------------------------
+    Total:                      20
+
+    Linker created                       40      256
+----------------------------------------------------
+    Grand Total:             4 294      118      725
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x08001078          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x0800109c          --   Gb  - Linker created -
+?main                   0x0800109d         Code  Gb  cmain.o [4]
+ADCChanls               0x08001114    0x4  Data  Gb  DataTables.o [1]
+ADCTodBValues           0x08000f9c   0x48  Data  Gb  DataTables.o [1]
+ADC_GetData             0x08000a79   0x3e  Code  Gb  ADC.o [1]
+ADC_Init                0x08000a19   0x60  Code  Gb  ADC.o [1]
+AudioChnls              0x20000268   0x54  Data  Lc  main.o [1]
+AudioChnlsCount         0x20000000    0x1  Data  Lc  main.o [1]
+CSTACK$$Base            0x20000008          --   Gb  - Linker created -
+CSTACK$$Limit           0x20000108          --   Gb  - Linker created -
+ChangeEffectFrame       0x080003d1  0x130  Code  Gb  main.o [1]
+ColorBuffer             0x20000108  0x100  Data  Lc  main.o [1]
+CurLEDIndex             0x200002d4    0x2  Data  Lc  NeoLEDOut.o [1]
+DMA1_Channel1_IRQHandler
+                        0x08000d49   0xb6  Code  Gb  NeoLEDOut.o [1]
+DMABuffer               0x20000208   0x60  Data  Lc  NeoLEDOut.o [1]
+Effects                 0x200002bc   0x10  Data  Lc  main.o [1]
+HardFault_Handler       0x080010e7    0x4  Code  Gb  stm32f0xx_it.o [1]
+LEDS_UPDATE_TIMER_ISR   0x08000901   0x26  Code  Gb  main.o [1]
+LEDsCount               0x200002d7    0x1  Data  Lc  main.o [1]
+LEDsCountUsed           0x200002da    0x1  Data  Lc  NeoLEDOut.o [1]
+LEDsMiddleZoneStart     0x200002d8    0x1  Data  Lc  main.o [1]
+LEDsPreChnl             0x200002d9    0x1  Data  Lc  main.o [1]
+LedsOutComplete         0x08000939    0xe  Code  Gb  main.o [1]
+LedsUpdate              0x08000961   0x3c  Code  Gb  main.o [1]
+Module_Init             0x08000575  0x384  Code  Gb  main.o [1]
+NMI_Handler             0x080010e5    0x2  Code  Gb  stm32f0xx_it.o [1]
+NVIC_EnableIRQ          0x080000b1    0xe  Code  Lc  main.o [1]
+NVIC_EnableIRQ          0x08000bb9    0xe  Code  Lc  NeoLEDOut.o [1]
+NVIC_SetPriority        0x080000bf   0x84  Code  Lc  main.o [1]
+NVIC_SetPriority        0x08000bc7   0x84  Code  Lc  NeoLEDOut.o [1]
+NeoBuffer               0x200002cc    0x4  Data  Lc  NeoLEDOut.o [1]
+NeoOutInit              0x08000c4b   0xba  Code  Gb  NeoLEDOut.o [1]
+NeoStartDataOut         0x08000d05   0x44  Code  Gb  NeoLEDOut.o [1]
+OutComplete             0x200002d0    0x4  Data  Lc  NeoLEDOut.o [1]
+PendSV_Handler          0x080010ed    0x2  Code  Gb  stm32f0xx_it.o [1]
+PrepareData             0x08000e05   0x5c  Code  Gb  NeoLEDOut.o [1]
+PrepareReset            0x08000e61   0x32  Code  Gb  NeoLEDOut.o [1]
+Region$$Table$$Base     0x08001078          --   Gb  - Linker created -
+Region$$Table$$Limit    0x0800109c          --   Gb  - Linker created -
+RightChnlTopToBottom    0x08000501   0x52  Code  Gb  main.o [1]
+SVC_Handler             0x080010eb    0x2  Code  Gb  stm32f0xx_it.o [1]
+State                   0x200002d6    0x1  Data  Lc  main.o [1]
+SysTick_Handler         0x080010ef    0x2  Code  Gb  stm32f0xx_it.o [1]
+SystemInit              0x08000f09   0x68  Code  Gb  system_stm32f0xx.o [1]
+TIM16_IRQHandler        0x080010f1    0x8  Code  Gb  stm32f0xx_it.o [1]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x20000fff          --   Gb  command line/config [2]
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x20000000          --   Gb  command line/config [2]
+__aeabi_idiv            0x08000b05         Code  Gb  I32DivModFast.o [4]
+__aeabi_idiv0           0x08000f05         Code  Gb  IntDivZer.o [4]
+__aeabi_idivmod         0x08000b05         Code  Gb  I32DivModFast.o [4]
+__aeabi_uidiv           0x08000b0b         Code  Gb  I32DivModFast.o [4]
+__aeabi_uidivmod        0x08000b0b         Code  Gb  I32DivModFast.o [4]
+__cmain                 0x0800109d         Code  Gb  cmain.o [4]
+__exit                  0x080010d1   0x14  Code  Gb  exit.o [5]
+__iar_copy_init3        0x08001021   0x30  Code  Gb  copy_init3.o [4]
+__iar_data_init3        0x08001051   0x28  Code  Gb  data_init.o [4]
+__iar_program_start     0x08001109         Code  Gb  cstartup_M.o [4]
+__iar_zero_init3        0x08000fe5   0x3c  Code  Gb  zero_init3.o [4]
+__low_level_init        0x080010b7    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x08000000         Data  Gb  startup_stm32f030x6.o [1]
+_call_main              0x080010a9         Code  Gb  cmain.o [4]
+_exit                   0x080010c5         Code  Gb  cexit.o [4]
+_main                   0x080010b3         Code  Gb  cmain.o [4]
+dBMultiplyer            0x20000001    0x1  Data  Lc  main.o [1]
+exit                    0x080010bb    0x8  Code  Gb  exit.o [3]
+main                    0x08000143  0x274  Code  Gb  main.o [1]
+
+
+[1] = F:\ArmProjects\NeoMusic\Debug\Obj
+[2] = command line
+[3] = dl6M_tln.a
+[4] = rt6M_tl.a
+[5] = shb_l.a
+
+  4 294 bytes of readonly  code memory
+    118 bytes of readonly  data memory
+    725 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
